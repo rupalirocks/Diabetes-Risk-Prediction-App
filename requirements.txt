@@ -1,4 +1,4 @@
-﻿streamlit
+streamlit
 pandas
 numpy
 scikit-learn
@@ -8,3 +8,5 @@ seaborn
 plotly
 shap
 requests
+
+
