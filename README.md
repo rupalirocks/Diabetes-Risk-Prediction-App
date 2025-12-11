@@ -1,48 +1,50 @@
 # Diabetes-Risk-Prediction-App
 Diabetes Risk Prediction App An interactive, AI-driven Streamlit dashboard that helps healthcare professionals explore diabetes patterns and estimate an individual’s risk of having diabetes using clinical and lifestyle features.
-Project overview
+**Project overview**
 Background
 Diabetes is one of the fastest-growing chronic diseases worldwide and is associated with complications such as heart disease, kidney failure, nerve damage, and vision impairment. Early detection and targeted prevention are essential to reduce long‑term health and economic burden.
 This project uses the Comprehensive Diabetes Clinical Dataset (Kaggle) (110k rows × 16 columns, MIT license) to build an end‑to‑end analytical and predictive pipeline for diabetes risk assessment.
 Pain points for healthcare institutions
 Many healthcare institutions lack practical tools to:
 
-Identify individuals at high risk of diabetes early, using routinely collected clinical data
-Understand how diabetes prevalence varies across demographic, lifestyle, and clinical factors
-Support data‑driven prevention strategies, targeted outreach, and resource planning
-Without these insights, high‑risk individuals may be missed, screening may not be prioritised, and preventable complications can accumulate over time.
+- Identify individuals at high risk of diabetes early, using routinely collected clinical data
+- Understand how diabetes prevalence varies across demographic, lifestyle, and clinical factors
+- Support data‑driven prevention strategies, targeted outreach, and resource planning
+- Without these insights, high‑risk individuals may be missed, screening may not be prioritised, and preventable complications can accumulate over time.
 
-Problem statement
+**Problem statement**
 This project addresses two core questions:
-Population‑level analytics
+**Population‑level analytics**
 How can healthcare institutions visualise and analyse diabetes prevalence across demographic, clinical and lifestyle factors to identify high‑risk groups and meaningful patterns for targeted interventions?
-Individual‑level risk prediction
+**Individual‑level risk prediction**
 How can we predict an individual’s likelihood of having diabetes using features such as age, BMI, HbA1c level, blood glucose, hypertension and heart disease with reliable accuracy to support early detection and preventive care?
+
 Proposed target and features
+
 Target variable: diabetes (Yes / No)
 Key features used in modelling (depending on final selection and encoding):
 
-Age
-Gender
-BMI
-HbA1c level
-Blood glucose level
-Hypertension
-Heart disease
+- Age
+- Gender
+- BMI
+- HbA1c level
+- Blood glucose level
+- Hypertension
+- Heart disease
 
-Project aims
+**Project aims**
 This project aims to develop an AI‑driven analytical dashboard that supports:
 
-Early detection – estimating diabetes risk for individual patients
-Trend monitoring – understanding patterns in diabetes prevalence across subgroups
-Data‑driven decision‑making – informing outreach, screening and prevention initiatives
+- Early detection – estimating diabetes risk for individual patients
+- Trend monitoring – understanding patterns in diabetes prevalence across subgroups
+- Data‑driven decision‑making – informing outreach, screening and prevention initiatives
 
 Using Streamlit, the app enables clinicians, data teams and public health professionals to:
 
-Explore diabetes prevalence across demographic (age, gender) and clinical (BMI, HbA1c, blood glucose) factors.
-Identify high‑risk groups that may benefit from targeted screening or wellness programmes
-Predict an individual’s likelihood of having diabetes using a trained machine learning model (e.g. Random Forest with class imbalance handling and tuning)
-View model explainability outputs (e.g. SHAP analysis) to understand which features drive predicted risk
+- Explore diabetes prevalence across demographic (age, gender) and clinical (BMI, HbA1c, blood glucose) factors.
+- Identify high‑risk groups that may benefit from targeted screening or wellness programmes
+- Predict an individual’s likelihood of having diabetes using a trained machine learning model (e.g. Random Forest with class imbalance handling and tuning)
+- View model explainability outputs (e.g. SHAP analysis) to understand which features drive predicted risk
 
 The goal is to empower healthcare institutions with actionable insights that enhance early intervention, improve resource allocation and reduce long‑term healthcare burdens.
 Dataset
@@ -52,30 +54,31 @@ License: MIT
 Access method: Direct CSV download from Kaggle
 Shape: ~110,000 records × 16 columns
 The dataset includes demographic, clinical and lifestyle variables such as age, gender, BMI, HbA1c level, blood glucose level, hypertension, heart disease, and smoking status.
-Features of the app
-Tab 1 – Diabetes Prediction
 
-User inputs for age, BMI, HbA1c level, blood glucose and other relevant factors
-Backend machine learning model (e.g. Random Forest) to estimate the probability of diabetes
-Risk category output (Low / Moderate / High) with clear explanatory text
+**Features of the app**
+*Tab 1 – Diabetes Prediction*
 
-Tab 2 – Lifestyle Recommendations
+* User inputs for age, BMI, HbA1c level, blood glucose and other relevant factors
+* Backend machine learning model (e.g. Random Forest) to estimate the probability of diabetes
+* Risk category output (Low / Moderate / High) with clear explanatory text
 
-Risk‑stratified educational guidance for low, moderate and high predicted risk
-Sections on Nutrition Therapy, Lifestyle Coaching, Monitoring and Education / remission mindset
-Emphasis on general education only and the need for clinician review for diagnosis and treatment decisions
+*Tab 2 – Lifestyle Recommendations*
 
-Tab 3 – Exploratory Data Analysis (EDA)
+* Risk‑stratified educational guidance for low, moderate and high predicted risk
+* Sections on Nutrition Therapy, Lifestyle Coaching, Monitoring and Education / remission mindset
+* Emphasis on general education only and the need for clinician review for diagnosis and treatment decisions
 
-Visualisations of diabetes prevalence and distributions across key variables
-“Diabetes profile” comparisons (average clinical profiles for diabetic vs non‑diabetic groups)
-Class imbalance and summary insights from the dataset
+*Tab 3 – Exploratory Data Analysis (EDA)*
 
-Tab 4 – Model Performance & Explainability
+* Visualisations of diabetes prevalence and distributions across key variables
+* “Diabetes profile” comparisons (average clinical profiles for diabetic vs non‑diabetic groups)
+* Class imbalance and summary insights from the dataset
 
-Model training pipeline overview (baseline, SMOTE, tuning, cross‑validation)
-Performance metrics (accuracy, precision, recall, F1‑score)
-Feature importance and SHAP‑based interpretability to explain predictions
+*Tab 4 – Model Performance & Explainability*
+
+* Model training pipeline overview (baseline, SMOTE, tuning, cross‑validation)
+* Performance metrics (accuracy, precision, recall, F1‑score)
+* Feature importance and SHAP‑based interpretability to explain predictions
 
 Installation
 Clone the repository
@@ -116,19 +119,18 @@ sctp-capstone-ii-25/
 ├─ notebooks/                  # Optional: EDA / modelling notebooks
 ├─ requirements.txt
 └─ README.md
-Roadmap / possible extensions
 
-Add additional models (e.g. Gradient Boosting, KNN, Neural Networks) and compare performance
-Enhance risk communication with more visual summaries and patient‑friendly narratives
-Add authentication and role‑based views (clinician vs data analyst)
-Integrate with APIs or databases for live data instead of static CSV
-Containerise the app (Docker) and deploy via cloud services with CI/CD
+**Roadmap / possible extensions**
+
+- Add additional models (e.g. Gradient Boosting, KNN, Neural Networks) and compare performance
+- Enhance risk communication with more visual summaries and patient‑friendly narratives
+- Add authentication and role‑based views (clinician vs data analyst)
+- Integrate with APIs or databases for live data instead of static CSV
+- Containerise the app (Docker) and deploy via cloud services with CI/CD
 
 Authors and acknowledgment
 Primary author: Priyam Choksi
 Authors and acknowledgment
-
-
 
 App and model development: Rupali Rajesh Desai
 Developed as part of SCTP Capstone II (Data Analytics with AI) from Nanyang Polytechnic, Singapore.
