@@ -48,7 +48,8 @@ def download_model():
     else:
         st.write("Model file already exists, skipping download.")
 
-@st.cache_resource
+# IMPORTANT: no cache while debugging
+# @st.cache_resource
 def load_model():
     download_model()
     if not os.path.exists(MODEL_PATH):
@@ -57,6 +58,7 @@ def load_model():
     return joblib.load(MODEL_PATH)
 
 model = load_model()
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(BASE_DIR, "diabetes_dataset.csv")
