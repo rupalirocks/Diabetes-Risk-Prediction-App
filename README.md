@@ -14,8 +14,10 @@ Many healthcare institutions lack practical tools to:
 
 **Problem statement**
 This project addresses two core questions:
+
 **Population‑level analytics**
 How can healthcare institutions visualise and analyse diabetes prevalence across demographic, clinical and lifestyle factors to identify high‑risk groups and meaningful patterns for targeted interventions?
+
 **Individual‑level risk prediction**
 How can we predict an individual’s likelihood of having diabetes using features such as age, BMI, HbA1c level, blood glucose, hypertension and heart disease with reliable accuracy to support early detection and preventive care?
 
