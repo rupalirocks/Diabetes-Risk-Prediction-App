@@ -3,10 +3,11 @@ Diabetes Risk Prediction App An interactive, AI-driven Streamlit dashboard that 
 **Project overview**
 Background
 Diabetes is one of the fastest-growing chronic diseases worldwide and is associated with complications such as heart disease, kidney failure, nerve damage, and vision impairment. Early detection and targeted prevention are essential to reduce long‑term health and economic burden.
-This project uses the Comprehensive Diabetes Clinical Dataset (Kaggle) (110k rows × 16 columns, MIT license) to build an end‑to‑end analytical and predictive pipeline for diabetes risk assessment.
-Pain points for healthcare institutions
-Many healthcare institutions lack practical tools to:
 
+This project uses the Comprehensive Diabetes Clinical Dataset (Kaggle) (110k rows × 16 columns, MIT license) to build an end‑to‑end analytical and predictive pipeline for diabetes risk assessment.
+
+**Pain points for healthcare institutions**
+Many healthcare institutions lack practical tools to:
 - Identify individuals at high risk of diabetes early, using routinely collected clinical data
 - Understand how diabetes prevalence varies across demographic, lifestyle, and clinical factors
 - Support data‑driven prevention strategies, targeted outreach, and resource planning
