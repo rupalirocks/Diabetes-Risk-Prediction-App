@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import shap
 import plotly.express as px
 import plotly.graph_objects as go
-
+import requests
 
 # -----------------------------
 # Page config
@@ -25,28 +25,38 @@ st.set_page_config(
 # -----------------------------
 # Load Model
 # -----------------------------
-MODEL_PATH = r"final_rf_model.pkl"
+MODEL_URL = "https://drive.google.com/uc?export=download&id=1JKIS5rtzsJ88Q8qU16TcCbahCp_KS3LQ"
+MODEL_PATH = "final_rf_model.pkl"
+
+def download_model():
+    st.write("Current working dir:", os.getcwd())
+    st.write("Looking for model at:", os.path.abspath(MODEL_PATH))
+
+    if not os.path.exists(MODEL_PATH):
+        st.write("Model file not found, starting download...")
+        with st.spinner("Downloading model (first time only)..."):
+            r = requests.get(MODEL_URL, stream=True)
+            r.raise_for_status()
+            with open(MODEL_PATH, "wb") as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    if chunk:
+                        f.write(chunk)
+
+        if not os.path.exists(MODEL_PATH):
+            st.error("Model download failed: file not found after download.")
+            st.stop()
+    else:
+        st.write("Model file already exists, skipping download.")
 
 @st.cache_resource
 def load_model():
+    download_model()
+    if not os.path.exists(MODEL_PATH):
+        st.error(f"Model file {MODEL_PATH} still not found before loading.")
+        st.stop()
     return joblib.load(MODEL_PATH)
 
 model = load_model()
-
-
-
-FEATURE_COLS = [
-    'age',
-    'bmi',
-    'hbA1c_level',
-    'blood_glucose_level',
-    'hypertension',
-    'heart_disease',
-    'gender_Female',
-    'gender_Male',
-    'gender_Other'
-]
-# Load dataset once
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(BASE_DIR, "diabetes_dataset.csv")
