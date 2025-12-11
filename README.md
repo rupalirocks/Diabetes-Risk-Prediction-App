@@ -137,7 +137,8 @@ This project is released under the MIT License.
 Please refer to the LICENSE file (or include one) for full terms and conditions.
 
 **App and model development: Rupali Rajesh Desai
-Developed as part of SCTP Capstone II (Data Analytics with AI) from Nanyang Polytechnic, Singapore.**
+Developed as part of SCTP Capstone II (Data Analytics with AI) from Nanyang Polytechnic, Singapore, December 2025**
+
 Dataset courtesy of the original Kaggle author; licensing details as per MIT terms.
 
 
