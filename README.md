@@ -101,15 +101,17 @@ Run the Streamlit app locally:
 bash
 streamlit run app_DiabetesPrediction.py
 Then open the URL shown in the terminal (usually http://localhost:8501) in your browser.
+
 Typical workflow:
 
-Go to the Diabetes Prediction tab, enter patient information and generate a predicted diabetes risk and risk category.
-Review Lifestyle Recommendations tailored to the predicted risk level.
-Explore EDA to understand dataset patterns and high‑risk groups.
-Review Model Performance & Explainability to see how the model was trained and what drives its predictions.
+- Go to the Diabetes Prediction tab, enter patient information and generate a predicted diabetes risk and risk category.
+- Review Lifestyle Recommendations tailored to the predicted risk level.
+- Explore EDA to understand dataset patterns and high‑risk groups.
+- Review Model Performance & Explainability to see how the model was trained and what drives its predictions.
 
 Project structure (example)
 text
+
 sctp-capstone-ii-25/
 ├─ app_DiabetesPrediction.py   # Main Streamlit app
 ├─ models/
@@ -131,13 +133,12 @@ sctp-capstone-ii-25/
 Authors and acknowledgment
 Primary author: Priyam Choksi
 Authors and acknowledgment
-
-App and model development: Rupali Rajesh Desai
-Developed as part of SCTP Capstone II (Data Analytics with AI) from Nanyang Polytechnic, Singapore.
-Dataset courtesy of the original Kaggle author; licensing details as per MIT terms.
-
-Developed as part of SCTP Capstone II 25 (Data & AI / Data Science training).
-Dataset courtesy of the original Kaggle author; licensing details as per MIT terms.
-License
 This project is released under the MIT License.
 Please refer to the LICENSE file (or include one) for full terms and conditions.
+
+**App and model development: Rupali Rajesh Desai
+Developed as part of SCTP Capstone II (Data Analytics with AI) from Nanyang Polytechnic, Singapore.**
+Dataset courtesy of the original Kaggle author; licensing details as per MIT terms.
+
+
+
