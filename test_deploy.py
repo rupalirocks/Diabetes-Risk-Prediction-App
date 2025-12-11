@@ -1,5 +1,3 @@
-# Best finalised model. EDA & SHAP done on 9/12/2025
-
 import streamlit as st
 import numpy as np
 import joblib
@@ -13,20 +11,14 @@ import plotly.express as px
 import plotly.graph_objects as go
 import requests
 
-# -----------------------------
-# Page config
-# -----------------------------
 st.set_page_config(
     page_title="Diabetes Capstone App",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# -----------------------------
-# Load Model
-# -----------------------------
-MODEL_URL = "https://drive.google.com/uc?export=download&id=1JKIS5rtzsJ88Q8qU16TcCbahCp_KS3LQ"
-MODEL_PATH = "final_rf_model.pkl"
+MODEL_URL = "https://drive.google.com/uc?export=download&id=NEW_FILE_ID"  # your latest clean .pkl
+MODEL_PATH = "final_rf_model_clean.pkl"  # must match the real file name
 
 def download_model():
     st.write("Current working dir:", os.getcwd())
@@ -48,7 +40,7 @@ def download_model():
     else:
         st.write("Model file already exists, skipping download.")
 
-# IMPORTANT: no cache while debugging
+# while debugging on Render, DO NOT cache
 # @st.cache_resource
 def load_model():
     download_model()
@@ -58,6 +50,7 @@ def load_model():
     return joblib.load(MODEL_PATH)
 
 model = load_model()
+
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
